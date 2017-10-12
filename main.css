@@ -1,0 +1,111 @@
+body,html {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	overflow-x: hidden; 
+    overflow-y: hidden;
+}
+
+.button{
+	padding: 20px;
+	padding-right: 100px;
+	padding-left: 100px;
+	text-align: center;
+	font-size: 36px;
+	font-family: 'Passion One', cursive;
+	border-radius: 100px;
+	background-color: #fff;
+	border: none;
+	margin-top: 1em;
+	transition: all 0.5s;
+	box-shadow: #969696 0px 2px 0;
+	text-decoration: none;
+	color: #000;
+}
+
+.button:hover{
+	color: #fff;
+	box-shadow: #fff 0px 2px 0;
+	background-color: #222;
+}
+
+.starfield{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.home{
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.welcome{
+	font-family: 'Pacifico', cursive;
+	font-size: 48px;
+	color: #fff;
+	text-shadow: #969696 0px 2px 0;
+}
+
+.site-name{
+	font-family: 'Passion One', cursive;
+	font-size: 96px;
+	color: #fff;
+	text-shadow: #969696 0px 2px 0;
+	margin-top: -0.5em;
+	margin-bottom: 0.5em;
+}
+
+.starfield > * {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	transform-origin: 50% 50%;
+
+    background-image:
+    	radial-gradient(2px 2px at 40px 60px, #ccc, rgba(0,0,0,0)),
+    	radial-gradient(2px 2px at 20px 50px, #ddd, rgba(0,0,0,0)),
+    	radial-gradient(2px 2px at 30px 100px, #eee, rgba(0,0,0,0)),
+    	radial-gradient(2px 2px at 40px 60px, #fff, rgba(0,0,0,0)),
+    	radial-gradient(2px 2px at 110px 90px, #ccc, rgba(0,0,0,0)),
+    	radial-gradient(2px 2px at 190px 150px, #ddd, rgba(0,0,0,0));
+  	background-repeat: repeat;
+  	background-size: 200px 200px;
+
+	-webkit-animation-name: starfieldRotate;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+
+.starfield > *:nth-child(1){
+	-webkit-animation-duration: 18s;
+}
+.starfield > *:nth-child(2){
+	-webkit-animation-duration: 22s;
+}
+.starfield > *:nth-child(3){
+	-webkit-animation-duration: 36s;
+}
+.starfield > *:nth-child(4){
+	-webkit-animation-duration: 40s;
+}
+
+@-webkit-keyframes starfieldRotate {
+	from {
+		-webkit-transform:rotate(0deg);
+	}
+	to {
+		-webkit-transform:rotate(360deg);
+	}
+}
